@@ -15,6 +15,7 @@ class App extends Component {
     //this.handleChange = this.handleChange.bind(this); -> no longer needed if we define the function as and arrow function
   }
   
+  
   componentDidMount() {
     fetch('https://jsonplaceholder.typicode.com/users/')
     .then(response => response.json())  //method on the response object that returns the response in json format
