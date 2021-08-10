@@ -14,7 +14,7 @@ class App extends Component {
 
     //this.handleChange = this.handleChange.bind(this); -> no longer needed if we define the function as and arrow function
   }
-  
+
   
   componentDidMount() {
     fetch('https://jsonplaceholder.typicode.com/users/')
@@ -39,7 +39,7 @@ class App extends Component {
     return (
       <div className="App">
 
-      <h1>Monsters Rolodex</h1>  
+      <h1>Monsters Rolodex TEST</h1>  
       <SearchBox 
         placeholder='search monsters'
         handleChange={this.handleChange}/>
