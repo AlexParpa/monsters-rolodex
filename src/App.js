@@ -14,7 +14,6 @@ class App extends Component {
 
     //this.handleChange = this.handleChange.bind(this); -> no longer needed if we define the function as and arrow function
   }
-
   
   componentDidMount() {
     fetch('https://jsonplaceholder.typicode.com/users/')
@@ -23,12 +22,12 @@ class App extends Component {
   }
 
   //lexical scoping
-  handleChange = (e) => {    
+  onSearchChange = (e) => {    
     this.setState({searchField: e.target.value});
   }
 
 
-  render() {
+  render() {    
     const { monsters, searchField } = this.state;
     const filteredMonsters = monsters.filter(monster => 
       monster.name.toLowerCase().includes(searchField.toLowerCase())
@@ -42,7 +41,7 @@ class App extends Component {
       <h1>Monsters Rolodex !!!</h1>  
       <SearchBox 
         placeholder='search monsters'
-        handleChange={this.handleChange}/>
+        handleChange={this.onSearchChange}/>
       <CardList monsters={filteredMonsters}/>
       </div>
     ); 
